@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Photo Gallery</title>
+  <meta name="description" content="Topic">
+  <meta name="author" content=" Ed">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!--for IE 9 insert the code bellow : -->
+  <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+      <![endif]-->
+
+
+<body>
+
+
+          <h1 style="text-align:center">Photo Gallery</h1>
+
+          <div class="row">
+            <div class="column">
+              <img src="images/Alpes, France.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="images/Arizona , crater.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="images/Atacama , Chile.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="images/Bagan, Myanmar.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="images/baikal lake , Russia.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="images/bergamo lombardy,italy.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="images/Bleik , norway.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="images/Bora Bora.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="images/brazil.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="images/Canyonlands National Park, Utah.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+            </div>
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <div class="numbertext">1 / 10</div>
+                <img src="images/Alpes, France.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 10</div>
+                <img src="images/Arizona , crater.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 10</div>
+                <img src="images/Atacama , Chile.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">4 / 10</div>
+                <img src="images/Bagan, Myanmar.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">5 / 10</div>
+                <img src="images/baikal lake , Russia.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">6 / 10</div>
+                <img src="images/bergamo lombardy,italy.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">7 / 10</div>
+                <img src="images/Bleik , norway.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">8 / 10</div>
+                <img src="images/Bora Bora.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">9 / 10</div>
+                <img src="images/brazil.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">10 / 10</div>
+                <img src="images/Canyonlands National Park, Utah.jpg" style="width:100%">
+              </div>
+
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+
+              <div class="column">
+                <img class="demo cursor" src="images/Alpes, France.jpg" style="width:100%" onclick="currentSlide(1)" alt="Alpes, France">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/Arizona , crater.jpg" style="width:100%" onclick="currentSlide(2)" alt="Arizona , crater">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/Atacama , Chile.jpg" style="width:100%" onclick="currentSlide(3)" alt="Atacama , Chile">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/Bagan, Myanmar.jpg" style="width:100%" onclick="currentSlide(4)" alt="Bagan, Myanmar">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/baikal lake , Russia.jpg" style="width:100%" onclick="currentSlide(5)" alt="baikal lake , Russia">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/bergamo lombardy,italy.jpg" style="width:100%" onclick="currentSlide(6)" alt="bergamo lombardy,italy">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/Bleik , norway.jpg" style="width:100%" onclick="currentSlide(7)" alt="Bleik , norway">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/Bora Bora.jpg" style="width:100%" onclick="currentSlide(8)" alt="Bora Bora">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/brazil.jpg" style="width:100%" onclick="currentSlide(9)" alt="brazil">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/Canyonlands National Park, Utah.jpg" style="width:100%" onclick="currentSlide(10)" alt="Canyonlands National Park, Utah">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="foot" style="text-align:center" style="background-color:blue">
+            <h3>Contact Information:</h3>
+            <p>Ed Tan</p>
+            <p>edtihcode@gmail.com</p>
+          </div>
+
+              <script src="js/scripts.js"></script>
+
+          </body>
+          </html>
